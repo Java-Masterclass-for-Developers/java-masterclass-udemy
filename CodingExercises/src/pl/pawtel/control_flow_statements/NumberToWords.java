@@ -9,6 +9,8 @@ public class NumberToWords {
         System.out.println("");
         numberToWords(1010);
         System.out.println("");
+        numberToWords(1001);
+        System.out.println("");
         numberToWords(10);
         System.out.println("");
         numberToWords(101);
