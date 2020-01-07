@@ -1,4 +1,4 @@
-package pl.pawtel.parsing_values_from_string;
+package pl.pawtel.control_flow_statements;
 
 public class FlourPackProblem {
 
