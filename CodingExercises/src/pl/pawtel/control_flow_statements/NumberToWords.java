@@ -15,7 +15,7 @@ public class NumberToWords {
         System.out.println("");
         numberToWords(101);
         System.out.println("");
-        numberToWords(1450);
+        numberToWords(145048972);
         System.out.println("");
         numberToWords(-12);
     }

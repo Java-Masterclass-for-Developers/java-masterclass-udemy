@@ -3,7 +3,7 @@ package pl.pawtel.control_flow_statements;
 public class DiagonalStar {
 
     public static void main(String[] args) {
-        printSquareStar(8);
+        printSquareStar(12);
     }
 
     public static void printSquareStar(int number) {
