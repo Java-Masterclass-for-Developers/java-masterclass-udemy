@@ -1,4 +1,6 @@
-package pl.pawtel.classes_constructors_inheritance;
+package pl.pawtel.classes_constructors_inheritance.cylinder;
+
+import pl.pawtel.classes_constructors_inheritance.cylinder.Circle;
 
 public class Cylinder extends Circle {
 

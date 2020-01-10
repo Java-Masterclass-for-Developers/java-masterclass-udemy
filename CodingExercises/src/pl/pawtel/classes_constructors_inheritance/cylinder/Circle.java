@@ -1,4 +1,4 @@
-package pl.pawtel.classes_constructors_inheritance;
+package pl.pawtel.classes_constructors_inheritance.cylinder;
 
 public class Circle {
 

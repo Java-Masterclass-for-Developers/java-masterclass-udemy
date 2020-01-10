@@ -1,5 +1,8 @@
 package pl.pawtel.classes_constructors_inheritance;
 
+import pl.pawtel.classes_constructors_inheritance.cylinder.Circle;
+import pl.pawtel.classes_constructors_inheritance.cylinder.Cylinder;
+
 public class Main {
     public static void main(String[] args) {
         // test for SimpleCalculator
@@ -48,16 +51,5 @@ public class Main {
         distance(second)= 5.0
         distance(2,2)= 5.0
         distance()= 0.0*/
-
-        // Circle TEST CODE:
-        Circle circle = new Circle(3.75);
-        System.out.println("circle.radius= " + circle.getRadius());
-        System.out.println("circle.area= " + circle.getArea());
-        Cylinder cylinder = new Cylinder(5.55, 7.25);
-        System.out.println("cylinder.radius= " + cylinder.getRadius());
-        System.out.println("cylinder.height= " + cylinder.getHeight());
-        System.out.println("cylinder.area= " + cylinder.getArea());
-        System.out.println("cylinder.volume= " + cylinder.getVolume());
-
     }
 }
