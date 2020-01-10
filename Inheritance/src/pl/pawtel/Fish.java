@@ -1,6 +1,6 @@
 package pl.pawtel;
 
-public class Fish extends Animal {
+public class Fish  extends Animal {
 
     private int gills;
     private int eyes;
@@ -28,6 +28,6 @@ public class Fish extends Animal {
     private void swim(int speed){
         moveMuscles();
         moveBackFin();
-        super.move();
+        super.move(speed);
     }
 }
