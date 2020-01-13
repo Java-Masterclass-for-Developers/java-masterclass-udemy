@@ -12,8 +12,6 @@ public class Main {
         Motherboard theMotherboard = new Motherboard("BJ-200", "Asus", 4, 6, "v.44");
 
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
-        thePC.getMonitor().drawPixelAt(1500, 1200, "red");
-        thePC.getMotherboard().loadProgramm("Windows 95");
-        thePC.getTheCase().pressPowerButton();
+        thePC.powerUp();
     }
 }
