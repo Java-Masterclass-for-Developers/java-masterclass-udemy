@@ -16,7 +16,7 @@ public class Motherboard {
         this.bios = bios;
     }
 
-    private void loadProgramm(String programName){
+    public void loadProgramm(String programName){
         System.out.println("Program " + programName + "is now loading...");
     }
 
