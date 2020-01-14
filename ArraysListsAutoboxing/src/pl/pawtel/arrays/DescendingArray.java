@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class DescendingArray {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         int[] unsortedArray = new int[5];
@@ -18,13 +20,10 @@ public class DescendingArray {
 
     public static void getIntegers(int[] array) {
 
-        Scanner scanner = new Scanner(System.in);
-
         for (int i = 0; i < array.length; i++) {
 
             System.out.println("Please insert number");
-            int number = scanner.nextInt();
-            array[i] = number;
+            array[i] = scanner.nextInt();
         }
         scanner.close();
     }
@@ -40,8 +39,8 @@ public class DescendingArray {
 
         Arrays.sort(array);
         System.out.println("Descending sort:");
-        for (int i = array.length - 1; i >= 0; i--)
-
+        for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
+        }
     }
 }
