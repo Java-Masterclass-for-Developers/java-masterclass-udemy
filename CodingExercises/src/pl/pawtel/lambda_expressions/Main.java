@@ -36,8 +36,15 @@ public class Main {
             }
             return returnVal.toString();
         };
-        System.out.println(lambdaFunction.apply("Example text"));
+        System.out.println(lambdaFunction.apply("0123456789"));
+
+        String testEverySecondCharacter = "1234567890";
+
+        System.out.println(everySecondCharacter(lambdaFunction, testEverySecondCharacter));
     }
 
-
+    // method that can take lamda as an argument
+    public static String everySecondCharacter(Function<String, String> func, String source) {
+        return func.apply(source);
+    }
 }
