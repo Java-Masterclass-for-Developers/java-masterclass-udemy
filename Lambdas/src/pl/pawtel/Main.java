@@ -38,14 +38,11 @@ public class Main {
             System.out.println(employee.getName());
         }
 
-        String sillyString = doStringStuff(new UpperConcat() {
-            @Override
-            public String upperAndConcat(String s1, String s2) {
-                return s1.toUpperCase() + s2.toUpperCase();
-            }
-        },
-                employees.get(1).getName(), employees.get(1).getName());
+        String sillyString = doStringStuff((s1, s2) -> s1.toUpperCase() + s2.toUpperCase(),
+                employees.get(0).getName(), employees.get(1).getName());
         System.out.println(sillyString);
+
+
 
     }
 
