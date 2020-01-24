@@ -1,6 +1,7 @@
 package pl.pawtel.lambda_expressions;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -25,6 +26,12 @@ public class Main {
             }
         };
         runnable.run();
+
+        //lambda that maps to Supplier interface
+//        Supplier<String> stringSupplier = () -> "I love Java";
+        Supplier<String> stringSupplier = () -> {return "I love Java";};
+        String iLoveJava = stringSupplier.get();
+        System.out.println(iLoveJava);
 
         // interface Function takes one value and with "apply" returns one modified
         Function<String, String> lambdaFunction = s -> {
