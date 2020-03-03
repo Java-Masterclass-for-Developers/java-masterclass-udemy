@@ -43,6 +43,7 @@ public class Main {
             }
             return returnVal.toString();
         };
+
         System.out.println(lambdaFunction.apply("0123456789"));
 
         String testEverySecondCharacter = "1234567890";
