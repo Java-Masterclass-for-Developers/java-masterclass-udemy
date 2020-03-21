@@ -1,7 +1,5 @@
 package pl.pawtel.debugging_demo;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Main {
     public static void main(String[] args) {
         StringUtilities utils = new StringUtilities();
@@ -10,5 +8,8 @@ public class Main {
             utils.addChar(sb, 'a');
         }
         System.out.println(sb);
+
+        String str = "abcdefg";
+        String result = utils.upperAndPrefix(utils.addSuffix(str));
     }
 }
