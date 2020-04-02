@@ -1,5 +1,7 @@
 package pl.pawtel.junit_banking;
 
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class BankAccountTest {
@@ -17,37 +19,37 @@ public class BankAccountTest {
         System.out.println("Running a test...");
     }
 
-    @org.junit.Test
+    @Test
     public void deposit() {
         double balance = account.deposit(200, true);
         assertEquals(1200.00, balance, 0);
     }
 
-    @org.junit.Test
+    @Test
     public void withdraw_branch() throws Exception {
     double balance = account.withdraw(200.00, true);
         assertEquals(800.00, account.getBalance(), 0);
     }
 
-    @org.junit.Test (expected = IllegalArgumentException.class)
+    @Test (expected = IllegalArgumentException.class)
     public void withdraw_notBranch() throws Exception {
-        double balance = account.withdraw(600.00, false);
-        assertEquals(400.00, account.getBalance(), 0);
+         account.withdraw(600.00, false);
+         fail("Should have thrown an IllegalArgument Exception");
     }
 
-    @org.junit.Test
+    @Test
     public void getBalance_deposit() {
         account.deposit(200, true);
         assertEquals(1200.00, account.getBalance(), 0);
     }
 
-    @org.junit.Test
+    @Test
     public void getBalance_withdraw() {
         account.withdraw(200, true);
         assertEquals(800.00, account.getBalance(), 0);
     }
 
-    @org.junit.Test
+    @Test
     public void isChecking_true() {
         assertTrue("The account is not a checking account", account.isChecking());
     }
