@@ -1,5 +1,7 @@
 package pl.pawtel.junit_challenge;
 
+import java.util.Random;
+
 public class Utilities {
 
     // Returns a char array containing every nth char. When
@@ -17,7 +19,6 @@ public class Utilities {
         for (int i = n - 1; i < sourceArray.length; i += n) {
             result[index++] = sourceArray[i];
         }
-
         return result;
     }
 
@@ -33,15 +34,17 @@ public class Utilities {
             return source;
         }
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(source);
         char[] string = source.toCharArray();
+        sb = new StringBuilder("");
 
-        for (int i = 0; i < string.length; i++) {
-            if (string[i] != string[i++]) {
-                sb.append(string[i]);
+        for (int i = 0; i < string.length - 1; ) {
+            if (string[i] != string[++i]) {
+                sb.append(string[--i]);
+                i++;
             }
         }
-
+        sb.append(string[string.length - 1]);
         return sb.toString();
     }
 

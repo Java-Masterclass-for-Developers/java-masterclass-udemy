@@ -18,10 +18,22 @@ public class UtilitiesTest {
     @Test
     public void removePairs() {
         //Given
-        fail("Methods fails; write testing code");
+        Utilities utilities = new Utilities();
+
+        String one = "AABCDDEFF";
+        String oneRemovedPairsExpect = "ABCDEF";
+
+        String two = "ABCCABDEEF";
+        String twoRemovedPairsExpect = "ABCABDEF";
+
+
         //When
+        String oneChange = utilities.removePairs(one);
+        String twoChange = utilities.removePairs(two);
 
         //Then
+        assertEquals(oneRemovedPairsExpect, oneChange);
+        assertEquals(twoRemovedPairsExpect, twoChange);
     }
 
     @Test
