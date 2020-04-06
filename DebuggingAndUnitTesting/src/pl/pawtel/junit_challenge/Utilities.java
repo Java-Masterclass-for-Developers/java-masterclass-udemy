@@ -38,10 +38,9 @@ public class Utilities {
         char[] string = source.toCharArray();
         sb = new StringBuilder("");
 
-        for (int i = 0; i < string.length - 1; ) {
-            if (string[i] != string[++i]) {
-                sb.append(string[--i]);
-                i++;
+        for (int i = 0; i < string.length - 1; i++) {
+            if (string[i] != string[i + 1]) {
+                sb.append(string[i]);
             }
         }
         sb.append(string[string.length - 1]);
