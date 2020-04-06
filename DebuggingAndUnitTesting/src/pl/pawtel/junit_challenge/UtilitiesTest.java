@@ -16,19 +16,34 @@ public class UtilitiesTest {
     }
 
     @Test
-    public void removePairs() {
+    public void removePairs() throws Exception{
         //Given
         Utilities utilities = new Utilities();
 
-        String one = "AABCDDEFF";
-        String oneRemovedPairsExpect = "ABCDEF";
+        String one = "AA BBCDDDEFF";
+        String oneRemovedPairsExpect = "A BCDEF";
+
 
         String two = "ABCCABDEEF";
         String twoRemovedPairsExpect = "ABCABDEF";
 
+        String three = "A";
+        String threeRemovedPairsExpect = "A";
+
+        String four = null;
+        String fourRemovedPairsExpect = null;
+
+        String five = "";
+        String fiveRemovedPairsExpect = "";
+
+
+
         //When&Then
         assertEquals(oneRemovedPairsExpect, utilities.removePairs(one));
         assertEquals(twoRemovedPairsExpect, utilities.removePairs(two));
+        assertEquals(threeRemovedPairsExpect, utilities.removePairs(three));
+        assertNull("we will not get null", utilities.removePairs(null));
+        assertEquals(fiveRemovedPairsExpect, utilities.removePairs(five));
     }
 
     @Test
