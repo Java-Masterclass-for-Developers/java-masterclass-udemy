@@ -26,14 +26,9 @@ public class UtilitiesTest {
         String two = "ABCCABDEEF";
         String twoRemovedPairsExpect = "ABCABDEF";
 
-
-        //When
-        String oneChange = utilities.removePairs(one);
-        String twoChange = utilities.removePairs(two);
-
-        //Then
-        assertEquals(oneRemovedPairsExpect, oneChange);
-        assertEquals(twoRemovedPairsExpect, twoChange);
+        //When&Then
+        assertEquals(oneRemovedPairsExpect, utilities.removePairs(one));
+        assertEquals(twoRemovedPairsExpect, utilities.removePairs(two));
     }
 
     @Test
