@@ -2,6 +2,8 @@ package pl.pawtel.junit_challenge;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class UtilitiesTest {
@@ -9,14 +11,15 @@ public class UtilitiesTest {
     @Test
     public void everyNthChar() {
         //Given
-        fail("Methods fails; write testing code");
-        //When
-
-        //Then
+        Utilities utilties = new Utilities();
+        char[] source = {'h', 'e', 'l', 'l', 'o'};
+        char[] output = {'e', 'l'};
+        //When&Then
+        assertArrayEquals(output, utilties.everyNthChar(source, 2));
     }
 
     @Test
-    public void removePairs() throws Exception{
+    public void removePairs() {
         //Given
         Utilities utilities = new Utilities();
 
@@ -35,7 +38,6 @@ public class UtilitiesTest {
 
         String five = "";
         String fiveRemovedPairsExpect = "";
-
 
 
         //When&Then
