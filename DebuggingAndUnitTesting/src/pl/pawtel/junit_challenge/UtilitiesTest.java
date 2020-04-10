@@ -19,6 +19,16 @@ public class UtilitiesTest {
     }
 
     @Test
+    public void everyNthChar_nGreaterThanStringLength() {
+        //Given
+        Utilities utilties = new Utilities();
+        char[] source = {'h', 'e', 'l', 'l', 'o'};
+        char[] output = {'h', 'e', 'l', 'l', 'o'};
+        //When&Then
+        assertArrayEquals(output, utilties.everyNthChar(source, 7));
+    }
+
+    @Test
     public void removePairs() {
         //Given
         Utilities utilities = new Utilities();
