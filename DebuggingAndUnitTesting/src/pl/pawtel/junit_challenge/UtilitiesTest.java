@@ -79,9 +79,11 @@ public class UtilitiesTest {
     @Test
     public void nullIfOddLength_even() {
         //Given
-        fail("Methods fails; write testing code");
+        Utilities utilities = new Utilities();
+        String oddLength = "qwerty";
         //When
-
-        //Then
+        String result = utilities.nullIfOddLength(oddLength);
+        // Then
+        assertEquals(oddLength, result);
     }
 }
