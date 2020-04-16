@@ -68,7 +68,16 @@ public class UtilitiesTest {
     }
 
     @Test
-    public void nullIfOddLength() {
+    public void nullIfOddLength_odd() {
+        //Given
+        Utilities utilities = new Utilities();
+        String oddLength = "qwert";
+        //When&Then
+        assertNull("we will not get null", utilities.nullIfOddLength(oddLength));
+    }
+
+    @Test
+    public void nullIfOddLength_even() {
         //Given
         fail("Methods fails; write testing code");
         //When
