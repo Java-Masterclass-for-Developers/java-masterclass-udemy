@@ -2,8 +2,6 @@ package pl.pawtel.junit_challenge;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 public class UtilitiesTest {
@@ -49,7 +47,6 @@ public class UtilitiesTest {
         String five = "";
         String fiveRemovedPairsExpect = "";
 
-
         //When&Then
         assertEquals(oneRemovedPairsExpect, utilities.removePairs(one));
         assertEquals(twoRemovedPairsExpect, utilities.removePairs(two));
@@ -61,10 +58,14 @@ public class UtilitiesTest {
     @Test
     public void converter() {
         //Given
-        fail("Methods fails; write testing code");
+        Utilities utilities = new Utilities();
+        int a = 10;
+        int b = 5;
+        int expectedInt = 300;
         //When
-
+        int result = utilities.converter(a, b);
         //Then
+        assertEquals(expectedInt, result);
     }
 
     @Test
