@@ -68,6 +68,16 @@ public class UtilitiesTest {
         assertEquals(expectedInt, result);
     }
 
+    @org.junit.Test(expected = ArithmeticException.class)
+    public void converter_arithmeticException() throws Exception {
+        //Given
+        Utilities utilities = new Utilities();
+        int a = 10;
+        int b = 0;
+        //When
+        utilities.converter(a, b);
+    }
+
     @Test
     public void nullIfOddLength_odd() {
         //Given
